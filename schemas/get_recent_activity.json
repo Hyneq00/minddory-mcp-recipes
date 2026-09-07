@@ -1,0 +1,28 @@
+{
+  "name": "get_recent_activity",
+  "title": "Get recent activity",
+  "kind": "read",
+  "annotations": {
+    "title": "Get recent activity",
+    "readOnlyHint": true
+  },
+  "description": "Event log slice with optional surface filter and keyset pagination on answers.id.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "surface": {
+        "type": "string",
+        "description": "e.g. 'claude_mcp', 'app', 'cursor_mcp'"
+      },
+      "limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100
+      },
+      "cursor": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  }
+}

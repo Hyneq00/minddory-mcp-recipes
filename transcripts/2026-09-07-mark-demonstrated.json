@@ -1,0 +1,40 @@
+{
+  "tool": "mark_demonstrated",
+  "captured_at": "2026-09-07T15:40:07Z",
+  "before": {
+    "tool": "get_card",
+    "request": { "word": "brittle", "lang": "en" },
+    "response": {
+      "ok": true,
+      "data": {
+        "word": "brittle",
+        "translation": "křehký, lámavý",
+        "lang": "en",
+        "lang_defaulted": false,
+        "mastery": "new",
+        "next_review_at": "2026-09-07T15:39:41.828Z",
+        "history": [
+          { "answer": "read_in_context", "at": "2026-09-07T15:39:41.828Z" }
+        ]
+      }
+    }
+  },
+  "request": {
+    "word": "brittle",
+    "lang": "en",
+    "confidence": "high",
+    "source": "claude_mcp",
+    "context": "Old plastic goes brittle and snaps instead of bending."
+  },
+  "response": {
+    "ok": true,
+    "data": {
+      "card_id": 25395,
+      "ease_factor": 2.8,
+      "next_review_at": "2026-09-08T15:40:07.396Z",
+      "lang": "en",
+      "lang_defaulted": false,
+      "note": null
+    }
+  }
+}

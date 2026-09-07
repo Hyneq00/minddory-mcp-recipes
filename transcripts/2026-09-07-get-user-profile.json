@@ -1,0 +1,21 @@
+{
+  "tool": "get_user_profile",
+  "captured_at": "2026-09-07T15:38Z",
+  "request": {},
+  "response": {
+    "ok": true,
+    "data": {
+      "level": "B2",
+      "primary_target_language": "en",
+      "primary_source_language": "cs",
+      "primary_target_variant": "en-us",
+      "primary_source_variant": "cs",
+      "due_today_count": 293,
+      "weak_words": [
+        { "word": "úšklebek", "mastery": "struggling", "incorrect_count_30d": 2 },
+        { "word": "chucked", "mastery": "low", "incorrect_count_30d": 2 }
+      ],
+      "recent_lookups": []
+    }
+  }
+}

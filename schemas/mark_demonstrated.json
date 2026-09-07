@@ -1,0 +1,46 @@
+{
+  "name": "mark_demonstrated",
+  "title": "Mark word demonstrated",
+  "kind": "write",
+  "annotations": {
+    "title": "Mark word demonstrated",
+    "readOnlyHint": false,
+    "destructiveHint": false
+  },
+  "description": "Confidence-weighted spaced-repetition boost when the user has used a word correctly: the card moves further out in the review schedule. Logs an answer row even if no flashcard exists.",
+  "inputSchema": {
+    "type": "object",
+    "required": [
+      "word",
+      "confidence"
+    ],
+    "properties": {
+      "word": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "lang": {
+        "type": "string",
+        "description": "Language tag of the word: base ISO with an optional region (en, en-us, pt-br). Scoped on the base, so the variant the session instructions ask you to send always matches. Omit it and the user's own primary learning language is used."
+      },
+      "confidence": {
+        "type": "string",
+        "enum": [
+          "high",
+          "medium",
+          "low"
+        ]
+      },
+      "source": {
+        "type": "string",
+        "maxLength": 100
+      },
+      "context": {
+        "type": "string",
+        "maxLength": 2000
+      }
+    },
+    "additionalProperties": false
+  }
+}

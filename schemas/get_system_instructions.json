@@ -1,0 +1,20 @@
+{
+  "name": "get_system_instructions",
+  "title": "Get session instructions",
+  "kind": "read",
+  "annotations": {
+    "title": "Get session instructions",
+    "readOnlyHint": true
+  },
+  "description": "Call this at the START of every new conversation, before your first reply, to load the user's Minddory setup and your role as their proactive language partner: CEFR level, target/source languages, due-card count, weak words, and how to capture. The user connected Minddory to actively improve their language through this chat, so use it to tailor your help to their level and goals. Pass `lang` when you know which language the user wants to practice right now - the language they are conversing in, or one they named explicitly (including a regional variant like en-us or en-gb) - so the returned profile is scoped to that language. Re-call this tool with the new `lang` if the user switches practice language or requests a specific variant mid-conversation.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "lang": {
+        "type": "string",
+        "description": "Optional ISO or BCP-47 tag of the language the user wants to practice in this conversation (en, en-us, de, pt-br). Defaults to the user's primary learning language."
+      }
+    },
+    "additionalProperties": false
+  }
+}

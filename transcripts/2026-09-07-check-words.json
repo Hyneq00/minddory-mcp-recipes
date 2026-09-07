@@ -1,0 +1,27 @@
+{
+  "tool": "check_words",
+  "captured_at": "2026-09-07T15:39Z",
+  "request": {
+    "words": ["beneath", "draining", "curtail", "windfall", "attrition", "brittle"],
+    "lang": "en"
+  },
+  "response": {
+    "ok": true,
+    "data": {
+      "lang": "en",
+      "lang_defaulted": false,
+      "skipped": [],
+      "words": [
+        { "word": "beneath", "in_deck": true, "mastery": "mastered", "translation": "pod", "next_review_at": "2026-04-15T09:13:17.247Z", "due": true },
+        { "word": "draining", "in_deck": true, "mastery": "mastered", "translation": "vyčerpávající", "next_review_at": "2026-04-15T09:13:17.247Z", "due": true },
+        { "word": "curtail", "in_deck": false, "mastery": "not_in_deck" },
+        { "word": "windfall", "in_deck": false, "mastery": "not_in_deck" },
+        { "word": "attrition", "in_deck": false, "mastery": "not_in_deck" },
+        { "word": "brittle", "in_deck": false, "mastery": "not_in_deck" }
+      ],
+      "not_in_deck": ["curtail", "windfall", "attrition", "brittle"],
+      "known": ["beneath", "draining"],
+      "struggling": []
+    }
+  }
+}

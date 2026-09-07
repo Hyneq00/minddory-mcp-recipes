@@ -1,0 +1,37 @@
+{
+  "name": "mark_struggled",
+  "title": "Mark word struggled",
+  "kind": "write",
+  "annotations": {
+    "title": "Mark word struggled",
+    "readOnlyHint": false,
+    "destructiveHint": false
+  },
+  "description": "Spaced-repetition degrade for a word the user just got wrong: the card comes back sooner. ease_factor drops, interval resets, repetitions reset.",
+  "inputSchema": {
+    "type": "object",
+    "required": [
+      "word"
+    ],
+    "properties": {
+      "word": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "lang": {
+        "type": "string",
+        "description": "Language tag of the word: base ISO with an optional region (en, en-us, pt-br). Scoped on the base, so the variant the session instructions ask you to send always matches. Omit it and the user's own primary learning language is used."
+      },
+      "source": {
+        "type": "string",
+        "maxLength": 100
+      },
+      "context": {
+        "type": "string",
+        "maxLength": 2000
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,22 @@
+https://api.minddory.com/v1/brain/mcp
+13 tools: 8 read, 5 write
+
+READ
+  get_user_profile           Profile snapshot: CEFR level, target/source languages, due card count, weak words, recent lookups.
+  get_system_instructions    Call this at the START of every new conversation, before your first reply, to load the user's Minddory setup and your role as their proactive langu...
+  get_known_words            Words the user has verified known via flashcard practice.
+  get_queue                  Cards due now and due within the next 24 hours.
+  get_card                   Single card detail by word (case-insensitive).
+  get_recent_activity        Event log slice with optional surface filter and keyset pagination on answers.id.
+  get_active_vocab           Get the user's most actively encountered target-language words (from past capture_word + log_interaction events), ranked by frequency over a lookba...
+  check_words                Batch lookup: for a list of target-language words, tell me which ones are already in the user's Minddory deck and how well they know each.
+
+WRITE
+  log_interaction            Append a generic interaction event to the answers log.
+  mark_demonstrated          Confidence-weighted spaced-repetition boost when the user has used a word correctly: the card moves further out in the review schedule.
+  mark_struggled             Spaced-repetition degrade for a word the user just got wrong: the card comes back sooner.
+  capture_word               Capture a target-language word or phrase to the user's Minddory vocabulary deck (a flashcard in the "Chat Discoveries" folder when the word is new,...
+  capture_grammar_mistake    Log a grammar mistake the user just made in the target language, creating a grammar point in their Minddory deck.
+
+tools/call without a token -> HTTP 401
+www-authenticate: Bearer resource_metadata="https://api.minddory.com/.well-known/oauth-protected-resource"

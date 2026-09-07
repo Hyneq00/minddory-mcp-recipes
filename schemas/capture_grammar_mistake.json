@@ -1,0 +1,47 @@
+{
+  "name": "capture_grammar_mistake",
+  "title": "Capture grammar mistake",
+  "kind": "write",
+  "annotations": {
+    "title": "Capture grammar mistake",
+    "readOnlyHint": false,
+    "destructiveHint": false
+  },
+  "description": "Log a grammar mistake the user just made in the target language, creating a grammar point in their Minddory deck. Use it proactively whenever the user writes a target-language sentence with a clear, correctable error (wrong tense, agreement, word_choice, word_order, missing or wrong article, preposition, gender, conjugation, spelling, pluralization). By connecting Minddory the user opted IN to automatic capture, so log it as you go - do not ask permission first or turn it into a yes/no question. The user connected Minddory to catch and review these patterns; you do not need to announce each log. Pass the original text + correction + error_type. Multiple mistakes in one message = multiple calls.\n\nVARIANT RULE: Always pass the user's full BCP-47 variant in the lang field (e.g. en-gb, not en) - get it from get_system_instructions on first turn. Before logging, check that the \"error\" is not actually a valid regional variant form (US past-simple vs UK present-perfect with \"just/already\", US \"in the hospital\" vs UK \"in hospital\", US \"color\" vs UK \"colour\", BR gerund vs PT \"a + infinitive\", etc.). When the variant is unspecified (base ISO only), treat ALL regional forms as valid. Better to skip a borderline call than to mark a valid variant form as wrong.\n\nerror_type must be one of: tense, agreement, word_choice, word_order, article, preposition, spelling, pluralization, conjugation, gender, other. Feeds the user's Grammar Patterns view at app.minddory.com/grammar.",
+  "inputSchema": {
+    "type": "object",
+    "required": [
+      "user_text",
+      "correction"
+    ],
+    "properties": {
+      "user_text": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000,
+        "description": "The exact erroneous sentence/phrase the user wrote."
+      },
+      "correction": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000,
+        "description": "The corrected sentence/phrase."
+      },
+      "error_type": {
+        "type": "string",
+        "maxLength": 40,
+        "description": "One of: tense, agreement, word_choice, word_order, article, preposition, spelling, pluralization, conjugation, gender, other."
+      },
+      "explanation": {
+        "type": "string",
+        "maxLength": 1000,
+        "description": "Short rationale (1-2 sentences). Optional."
+      },
+      "lang": {
+        "type": "string",
+        "description": "ISO target language code."
+      }
+    },
+    "additionalProperties": false
+  }
+}

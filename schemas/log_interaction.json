@@ -1,0 +1,42 @@
+{
+  "name": "log_interaction",
+  "title": "Log interaction",
+  "kind": "write",
+  "annotations": {
+    "title": "Log interaction",
+    "readOnlyHint": false,
+    "destructiveHint": false
+  },
+  "description": "Append a generic interaction event to the answers log. Use for lookups, AI discussions, and reading-in-context signals.",
+  "inputSchema": {
+    "type": "object",
+    "required": [
+      "type",
+      "word"
+    ],
+    "properties": {
+      "type": {
+        "type": "string",
+        "enum": [
+          "lookup",
+          "discussed",
+          "read_in_context"
+        ]
+      },
+      "word": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "lang": {
+        "type": "string",
+        "description": "Language tag of the word: base ISO with an optional region (en, en-us, pt-br). Scoped on the base, so the variant the session instructions ask you to send always matches. Omit it and the user's own primary learning language is used."
+      },
+      "metadata": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "tool": "get_active_vocab",
+  "note": "Called twice on purpose: once before any capture in this session, once after.",
+  "before": {
+    "captured_at": "2026-09-07T15:39Z",
+    "request": { "lang": "en", "limit": 8, "lookback_days": 30 },
+    "response": {
+      "ok": true,
+      "data": {
+        "words": [],
+        "lookback_days": 30,
+        "lang": "en",
+        "note": "No tracked encounters in the window. Use capture_word to seed."
+      }
+    }
+  },
+  "after": {
+    "captured_at": "2026-09-07T15:40Z",
+    "request": { "lang": "en", "limit": 8, "lookback_days": 30 },
+    "response": {
+      "ok": true,
+      "data": {
+        "words": [
+          { "word": "attrition", "lang": "en", "uses": 1, "first_seen_at": "2026-09-07T15:39:41.828Z", "last_seen_at": "2026-09-07T15:39:41.828Z" },
+          { "word": "brittle", "lang": "en", "uses": 1, "first_seen_at": "2026-09-07T15:39:41.828Z", "last_seen_at": "2026-09-07T15:39:41.828Z" },
+          { "word": "curtail", "lang": "en", "uses": 1, "first_seen_at": "2026-09-07T15:39:41.828Z", "last_seen_at": "2026-09-07T15:39:41.828Z" },
+          { "word": "windfall", "lang": "en", "uses": 1, "first_seen_at": "2026-09-07T15:39:41.828Z", "last_seen_at": "2026-09-07T15:39:41.828Z" }
+        ],
+        "lookback_days": 30,
+        "lang": "en",
+        "note": "Top 4 words by encounter count over the last 30 day(s)."
+      }
+    }
+  }
+}

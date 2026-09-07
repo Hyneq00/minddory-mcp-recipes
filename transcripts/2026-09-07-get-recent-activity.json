@@ -1,0 +1,20 @@
+{
+  "tool": "get_recent_activity",
+  "captured_at": "2026-09-07T15:40Z",
+  "note": "The audit trail of every write made in this session, read back from the server.",
+  "request": { "surface": "claude_mcp", "limit": 6 },
+  "response": {
+    "ok": true,
+    "data": {
+      "events": [
+        { "id": 12266, "at": "2026-09-07T15:40:07.396Z", "surface": "claude_mcp", "answer": "demonstrated", "confidence": "high", "word": "brittle", "metadata": { "lang": "en", "word": "brittle", "source": "claude_mcp", "context": "Old plastic goes brittle and snaps instead of bending." } },
+        { "id": 12265, "at": "2026-09-07T15:39:56.394Z", "surface": "claude_mcp", "answer": "grammar_mistake", "confidence": null, "word": null, "metadata": { "lang": "en-us", "user_text": "I am living in Prague since 2019.", "correction": "I have been living in Prague since 2019.", "error_type": "tense", "explanation": "A state that started in the past and still holds takes the present perfect continuous with \"since\", not the present continuous.", "raw_error_type": "tense" } },
+        { "id": 12264, "at": "2026-09-07T15:39:41.828Z", "surface": "claude_mcp", "answer": "read_in_context", "confidence": null, "word": "brittle", "metadata": { "lang": "en", "word": "brittle", "gloss": "křehký, lámavý", "context": "Old plastic goes brittle and snaps instead of bending.", "captured": true, "source_lang": "cs", "gloss_source": null } },
+        { "id": 12263, "at": "2026-09-07T15:39:41.828Z", "surface": "claude_mcp", "answer": "read_in_context", "confidence": null, "word": "attrition", "metadata": { "lang": "en", "word": "attrition", "gloss": "úbytek, opotřebení", "context": "The team shrank by attrition rather than by layoffs.", "captured": true, "source_lang": "cs", "gloss_source": null } },
+        { "id": 12262, "at": "2026-09-07T15:39:41.828Z", "surface": "claude_mcp", "answer": "read_in_context", "confidence": null, "word": "windfall", "metadata": { "lang": "en", "word": "windfall", "gloss": "nečekaný zisk", "context": "The tax refund was a windfall nobody had budgeted for.", "captured": true, "source_lang": "cs", "gloss_source": null } },
+        { "id": 12261, "at": "2026-09-07T15:39:41.828Z", "surface": "claude_mcp", "answer": "read_in_context", "confidence": null, "word": "curtail", "metadata": { "lang": "en", "word": "curtail", "gloss": "omezit, zkrátit", "context": "The central bank moved to curtail lending before the housing market overheated.", "captured": true, "source_lang": "cs", "gloss_source": null } }
+      ],
+      "next_cursor": "12261"
+    }
+  }
+}

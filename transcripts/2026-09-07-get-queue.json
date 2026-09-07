@@ -1,0 +1,26 @@
+{
+  "tool": "get_queue",
+  "captured_at": "2026-09-07T15:38Z",
+  "request": { "max": 8 },
+  "response": {
+    "ok": true,
+    "data": {
+      "lang": "en",
+      "lang_defaulted": true,
+      "due_now": [
+        { "word": "convince you", "source": "přesvědčit tě", "next_review_at": "2026-04-15T09:13:17.247Z" },
+        { "word": "volunteering", "source": "dobrovolnictví", "next_review_at": "2026-04-15T09:13:17.247Z" },
+        { "word": "it was unfavorable", "source": "bylo to nepříznivé", "next_review_at": "2026-04-15T09:13:17.247Z" },
+        { "word": "small scuffles", "source": "menší potyčky", "next_review_at": "2026-04-15T09:13:17.247Z" },
+        { "word": "beneath", "source": "pod", "next_review_at": "2026-04-15T09:13:17.247Z" },
+        { "word": "littering", "source": "odpadování", "next_review_at": "2026-04-15T09:13:17.247Z" },
+        { "word": "draining", "source": "vyčerpávající", "next_review_at": "2026-04-15T09:13:17.247Z" },
+        { "word": "he had admitted", "source": "přiznal", "next_review_at": "2026-04-15T09:13:17.247Z" }
+      ],
+      "due_soon": [
+        { "word": "lack of rich farmers", "source": "nedostatek bohatých farmářů", "next_review_at": "2026-09-08T11:10:11.981Z" },
+        { "word": "woefully", "source": "žalostně", "next_review_at": "2026-09-08T11:11:18.342Z" }
+      ]
+    }
+  }
+}

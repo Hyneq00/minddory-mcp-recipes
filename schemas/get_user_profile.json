@@ -1,0 +1,20 @@
+{
+  "name": "get_user_profile",
+  "title": "Get user profile",
+  "kind": "read",
+  "annotations": {
+    "title": "Get user profile",
+    "readOnlyHint": true
+  },
+  "description": "Profile snapshot: CEFR level, target/source languages, due card count, weak words, recent lookups. Pass `lang` to scope the snapshot to one learning language (for users learning several); omit it for the user's primary language.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "lang": {
+        "type": "string",
+        "description": "Optional ISO or BCP-47 tag (en, en-us, pt-br). Scopes the whole profile - level, due count, weak words - to that learning language. Omit for the user's primary language."
+      }
+    },
+    "additionalProperties": false
+  }
+}

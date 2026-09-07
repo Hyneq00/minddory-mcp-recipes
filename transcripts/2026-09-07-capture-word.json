@@ -1,0 +1,31 @@
+{
+  "tool": "capture_word",
+  "captured_at": "2026-09-07T15:39:41Z",
+  "request": {
+    "lang": "en",
+    "source_lang": "cs",
+    "words": [
+      { "word": "curtail", "gloss": "omezit, zkrátit", "context": "The central bank moved to curtail lending before the housing market overheated." },
+      { "word": "windfall", "gloss": "nečekaný zisk", "context": "The tax refund was a windfall nobody had budgeted for." },
+      { "word": "attrition", "gloss": "úbytek, opotřebení", "context": "The team shrank by attrition rather than by layoffs." },
+      { "word": "brittle", "gloss": "křehký, lámavý", "context": "Old plastic goes brittle and snaps instead of bending." }
+    ]
+  },
+  "response": {
+    "ok": true,
+    "data": {
+      "items": [
+        { "word": "curtail", "created": true, "flashcard_id": 25392, "folder_id": 3520, "folder_created": true, "answer_id": 12261, "next_review_at": "2026-09-07T15:39:41.828Z" },
+        { "word": "windfall", "created": true, "flashcard_id": 25393, "folder_id": 3520, "folder_created": false, "answer_id": 12262, "next_review_at": "2026-09-07T15:39:41.828Z" },
+        { "word": "attrition", "created": true, "flashcard_id": 25394, "folder_id": 3520, "folder_created": false, "answer_id": 12263, "next_review_at": "2026-09-07T15:39:41.828Z" },
+        { "word": "brittle", "created": true, "flashcard_id": 25395, "folder_id": 3520, "folder_created": false, "answer_id": 12264, "next_review_at": "2026-09-07T15:39:41.828Z" }
+      ],
+      "target_lang": "en",
+      "source_lang": "cs",
+      "captured_count": 4,
+      "skipped_count": 0,
+      "untranslatable_count": 0,
+      "note": "Captured 4 new word(s), skipped 0, total processed 4."
+    }
+  }
+}

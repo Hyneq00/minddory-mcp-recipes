@@ -1,0 +1,32 @@
+{
+  "name": "get_active_vocab",
+  "title": "Get active vocabulary",
+  "kind": "read",
+  "annotations": {
+    "title": "Get active vocabulary",
+    "readOnlyHint": true
+  },
+  "description": "Get the user's most actively encountered target-language words (from past capture_word + log_interaction events), ranked by frequency over a lookback window. Use to surface \"frontier\" words the user keeps touching when they ask \"what should I learn next\" or when you want context-aware suggestions.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "lang": {
+        "type": "string",
+        "description": "Language tag (en, en-us, pt-br). Matching is on the base code, so a variant finds encounters logged under any sibling. Omit it to include ALL languages - unlike the deck tools, this one is a cross-language frequency view."
+      },
+      "limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Default 20."
+      },
+      "lookback_days": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 365,
+        "description": "Default 30."
+      }
+    },
+    "additionalProperties": false
+  }
+}

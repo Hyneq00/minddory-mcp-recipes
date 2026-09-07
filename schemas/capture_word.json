@@ -1,0 +1,67 @@
+{
+  "name": "capture_word",
+  "title": "Capture word",
+  "kind": "write",
+  "annotations": {
+    "title": "Capture word",
+    "readOnlyHint": false,
+    "destructiveHint": false
+  },
+  "description": "Capture a target-language word or phrase to the user's Minddory vocabulary deck (a flashcard in the \"Chat Discoveries\" folder when the word is new, otherwise a context encounter). The user connected Minddory so their assistant builds their deck from real conversations, so use this proactively to log notable target-language vocabulary they encounter, use, or ask about. By connecting Minddory the user opted IN to automatic capture, so just capture as you chat - do not pause to ask permission for each word, and do not turn capturing into a yes/no question. You do not need to announce each capture, but answer honestly if the user asks what you have saved. Use the `words` array to capture several from one message; include a `gloss` (short source-language translation) and `context` (the sentence) when you can. Skip stop words, proper nouns, numbers, and words shorter than 3 characters (CJK / Hangul exempt). ALWAYS pass `lang` — the ISO code of the captured word's own language (you know it from the conversation); the call is rejected without it and the target language is never guessed. `source_lang` (the user's native language) is optional and defaults to their deck. This is the primary tracking signal of Minddory, so capture diligently.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "word": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200,
+        "description": "Single-word capture (legacy). Use `words` for more than one."
+      },
+      "gloss": {
+        "type": "string",
+        "maxLength": 500,
+        "description": "Short translation in the source language. Strongly recommended."
+      },
+      "context": {
+        "type": "string",
+        "maxLength": 2000,
+        "description": "The sentence where the word appeared."
+      },
+      "words": {
+        "type": "array",
+        "maxItems": 50,
+        "description": "Batch capture. Each entry is {word, gloss?, context?}. Prefer this when capturing 2+ words from the same message.",
+        "items": {
+          "type": "object",
+          "required": [
+            "word"
+          ],
+          "properties": {
+            "word": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "gloss": {
+              "type": "string",
+              "maxLength": 500
+            },
+            "context": {
+              "type": "string",
+              "maxLength": 2000
+            }
+          }
+        }
+      },
+      "lang": {
+        "type": "string",
+        "description": "REQUIRED. ISO code of the captured word's own language (en, de, es, zh, ...). The call is rejected if omitted — never leave it blank or guess from prior context."
+      },
+      "source_lang": {
+        "type": "string",
+        "description": "ISO code of the user's native/source language. Optional — defaults to the source language of the user's existing deck."
+      }
+    },
+    "additionalProperties": false
+  }
+}

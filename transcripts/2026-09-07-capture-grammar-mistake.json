@@ -1,0 +1,20 @@
+{
+  "tool": "capture_grammar_mistake",
+  "captured_at": "2026-09-07T15:39:56Z",
+  "request": {
+    "user_text": "I am living in Prague since 2019.",
+    "correction": "I have been living in Prague since 2019.",
+    "error_type": "tense",
+    "explanation": "A state that started in the past and still holds takes the present perfect continuous with \"since\", not the present continuous.",
+    "lang": "en-us"
+  },
+  "response": {
+    "ok": true,
+    "data": {
+      "answer_id": 12265,
+      "logged_at": "2026-09-07T15:39:56.394Z",
+      "error_type": "tense",
+      "note": "Mistake logged silently. Feeds future grammar-layer surfacing."
+    }
+  }
+}
