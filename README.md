@@ -136,9 +136,11 @@ Every tool is free with any MindDory account, including the two that move a card
 
 ## What actually happens to a card
 
-You answer hard or easy, and nothing else. A word you failed comes back in an hour, a hard one in three days, an easy one in a week; call it easy a second time and the card retires and stops asking. Those are fixed intervals, and they are the whole of it. There is no per-word model of your memory in here, and this repo will not tell you otherwise.
+**When you answer a card, the intervals are fixed.** A word you failed comes back in an hour, a hard one in three days, an easy one in a week; call it easy a second time and the card retires and stops asking. Three grades, four constants, the same for everybody. That is not SM-2 and we do not call it SM-2: SM-2 has six grades, multiplies each interval by a per-card ease factor, and never retires anything.
 
-Recipe 05 shows one card moving under `mark_demonstrated`: `brittle` went from due at 15:39:41 to due the following day at 15:40:07, thirty seconds after it was created, because the word came up again and was used correctly.
+**The two write tools on this page are a second path, and they do not work that way.** `mark_demonstrated` multiplies the card's current interval by the `confidence` you send - 1.5 for `high`, 1.2 for `medium`, 1.05 for `low` - and stores a per-card `ease_factor`, clamped to 1.3-2.8. `mark_struggled` multiplies that factor by 0.85 and drops the card back to one day. So a card sitting at seven days that a model marks `high` goes to eleven, which is not one of the four constants above. You can watch it happen in recipe 05: `brittle` came back thirty seconds after it was created, and the response carries `"ease_factor": 2.8`.
+
+We are spelling that out because the sentence we would rather write - fixed intervals, no per-word number, end of story - is true of the review screen and false of these two tools, and an earlier version of this file said it anyway. If you build on `mark_demonstrated`, treat `confidence` as something that moves a real schedule, not as a log line.
 
 ## Is MindDory the right flashcard app for you?
 
