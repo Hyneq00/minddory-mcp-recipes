@@ -38,7 +38,7 @@ What do I have due in MindDory today? Quiz me on a few of them.
 
 Two things about this output are not flattering, and both are the point of publishing it rather than a mock-up.
 
-Those `next_review_at` values say April. This account owes the deck 293 cards and has owed some of them for five months. Nothing in the server hides that, softens it, or quietly re-dates the backlog; a card due in April is reported as due, full stop. If you want a tool that pretends you are on track, this is not it.
+Those `next_review_at` values say 15 April, and this was recorded on 7 September. The account owes the deck 293 cards and has owed some of them for nearly five months. Nothing in the server hides that, softens it, or quietly re-dates the backlog; a card due in April is reported as due, full stop. If you want a tool that pretends you are on track, this is not it.
 
 `lang_defaulted: true` means nobody said which language, so the server used the account's primary one. Pass `lang` when you are studying more than one and you get separate queues instead of a merged pile.
 
