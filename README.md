@@ -6,6 +6,8 @@ Every response in [`transcripts/`](transcripts/) was recorded on 2026-09-07 agai
 
 ## How can I turn words from a ChatGPT or Claude conversation into flashcards?
 
+Short answer: in any client that speaks the Model Context Protocol. Claude on the web and in the desktop apps, Cursor, Zed, Cline and Continue all connect to the endpoint below. ChatGPT is in that question because it is the one people ask about, and it is the one honest gap here: the connector flow has never been completed end to end from inside ChatGPT, so it is not on the list until somebody has actually done it.
+
 You say this, once, at the top of a conversation:
 
 ```
