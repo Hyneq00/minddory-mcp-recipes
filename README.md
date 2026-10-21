@@ -132,7 +132,7 @@ There is no npm package to install and no process to keep alive, because nothing
 
 Those files are output, not documentation. `node scripts/list-tools.mjs --schemas` deletes the directory and rewrites it from the live manifest, which is the only way they stay honest: a schema file for a tool that no longer exists reads exactly like a schema file for one that does.
 
-Every tool is free with any MindDory account, including the two that move a card in the schedule. That has been true since 2026-08-20. MindDory Premium ($7.99/month or $49.99/year) buys the AI features inside the apps, and buys nothing here. Any listing that still tells you writes are gated is holding a stale copy of our README.
+Every tool is free with any MindDory account, including the two that move a card in the schedule. That has been true since 2026-08-20. MindDory Premium ($9.99/month or $49.99/year) buys the AI features inside the apps, and buys nothing here. Any listing that still tells you writes are gated is holding a stale copy of our README.
 
 ## What actually happens to a card
 
